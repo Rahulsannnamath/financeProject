@@ -1,0 +1,11 @@
+# Ignore all env files
+**/.env
+
+# Node modules in all subfolders
+**/node_modules
+
+# Logs
+*.log
+
+# .DS_Store for Mac users
+.DS_Store
