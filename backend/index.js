@@ -13,7 +13,7 @@ const cookieParser = require("cookie-parser");
 const authRoute = require("./Routes/AuthRoute");
 async function main() {
     try{
-        const connection = await mongoose.connect('mongodb://127.0.0.1:27017/zerodha');
+        const connection = await mongoose.connect(process.env.MONGO_ATLAS);
         console.log("database is connected");
     }
     catch(err){
@@ -61,7 +61,7 @@ mode
 });
 
 await newOrder.save();
-await HoldingsModel.insertOne({name , qty , price , net:"+0.05" , day:"+2.99%" , isLoss : false , avg: 4727});
+// await HoldingsModel.insertOne({name , qty , price , net:"+0.05" , day:"+2.99%" , isLoss : false , avg: 4727});
 res.send("order placed");
 });
 
@@ -70,3 +70,17 @@ let orders = await orderModel.find({});
 res.json(orders);
 });
 
+
+app.get("/logout", (req, res) => {
+    res.clearCookie("token", {
+      httpOnly: true,
+      sameSite: "None", // or "Lax"
+      secure: true,       // only if using HTTPS
+    });
+    res.status(200).json({ message: "Logged out successfully" });
+  });
+
+  app.get('/health', (req, res) => {
+    res.status(200).send("testing");
+  });
+  

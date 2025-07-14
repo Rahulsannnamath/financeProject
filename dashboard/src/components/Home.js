@@ -9,6 +9,7 @@ const Home = () => {
       <TopBar />
       <Dashboard />
     </>
+    
   );
 };
 

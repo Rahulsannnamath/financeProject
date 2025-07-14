@@ -15,6 +15,7 @@ async function main() {
 main();
 
 async function init(){
+await holdingsModel.deleteMany({});
 await holdingsModel.insertMany(holdings);
 console.log("data inserted successfully");
 }
