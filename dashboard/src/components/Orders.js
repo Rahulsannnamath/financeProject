@@ -24,7 +24,7 @@ export default function Orders() {
   ]);
 
   useEffect(()=>{
-  axios.get("http://localhost:8080/showOrders").then((res)=>{
+  axios.get("https://fincrux.onrender.com/showOrders").then((res)=>{
     setOrders(res.data);
     
   }).catch((err)=>{

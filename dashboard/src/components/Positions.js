@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 const Positions = () => {
   const [positions,setPositions] = useState([]);
   useEffect(()=>{
-    axios.get("http://localhost:8080/allpositions").then((res)=>{
+    axios.get("https://fincrux.onrender.com//allpositions").then((res)=>{
       setPositions(res.data);
     }).catch((err)=>{
       console.log(err);

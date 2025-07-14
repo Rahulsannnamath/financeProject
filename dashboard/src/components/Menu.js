@@ -16,7 +16,7 @@ const Menu = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.get("http://localhost:8080/logout", {
+      await axios.get("https://fincrux.onrender.com/logout", {
         withCredentials: true,
       });
       window.location.href = "http://localhost:5173/"; // redirect to login

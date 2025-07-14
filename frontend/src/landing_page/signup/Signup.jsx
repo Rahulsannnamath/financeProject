@@ -14,7 +14,7 @@ function SignUp() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:8080/signup", formData, {
+      await axios.post("https://fincrux.onrender.com/signup", formData, {
         withCredentials: true, // only needed if you're using cookies
       });
 
