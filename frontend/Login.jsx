@@ -18,7 +18,7 @@ function Login() {
       });
 
      
-      window.location.href = "http://localhost:3000";
+      window.location.href = "https://fincrux-frontend.onrender.com";
     } catch (err) {
       console.error("Login failed", err);
       alert("Invalid credentials");
