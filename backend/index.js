@@ -24,7 +24,7 @@ async function main() {
 
 app.use(express.json());
 app.use(cors({
-    origin:[ "http://localhost:5173", "http://localhost:3000"],
+    origin:[ "http://localhost:5173", "http://localhost:3000","https://fincrux-dashboard.onrender.com","https://fincrux-frontend.onrender.com"],
     credentials: true  
   }));
 app.use(express.urlencoded({ extended: true })); 
