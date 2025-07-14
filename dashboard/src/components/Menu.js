@@ -19,7 +19,7 @@ const Menu = () => {
       await axios.get("https://fincrux.onrender.com/logout", {
         withCredentials: true,
       });
-      window.location.href = "http://localhost:5173/"; // redirect to login
+      window.location.href = "https://fincrux-frontend.onrender.com"; // redirect to login
     } catch (error) {
       console.error("Logout failed:", error);
     }
